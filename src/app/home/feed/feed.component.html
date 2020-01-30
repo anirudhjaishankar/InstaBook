@@ -1,3 +1,21 @@
-<p>
-  feed works!
-</p>
+<ion-header>
+  <ion-toolbar>
+      <ion-button slot="start" fill="none" size="small" shape="rounded">
+        <ion-icon slot="icon-only" name="camera" size="large"></ion-icon>
+      </ion-button>
+      <ion-row class="ion-justify-content-center">
+        <ion-col class="colomn">
+          <ion-title class="toolbar-title">Instagram</ion-title>
+        </ion-col>
+      </ion-row>
+      <ion-button slot="end" fill="none">
+        <ion-icon size="large" name="paper-plane"></ion-icon>
+      </ion-button>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <app-post-list></app-post-list>
+</ion-content>

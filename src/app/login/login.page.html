@@ -1,0 +1,32 @@
+
+
+<ion-content>
+  <ion-grid>
+    <ion-row class="ion-margin-top ion-align-items-center ion-justify-content-center login">
+      <ion-col  size-xs="10" size-sm="8" size-md="6" size-lg="4">
+        <ion-row class="ion-justify-content-center ion-margin-top">
+          <h1 class="insta-title">
+            Instagram
+          </h1>
+        </ion-row>
+        <div>
+          <form [formGroup]="loginForm" >
+            <ion-item class="ion-margin">
+              <ion-label position="floating">Username</ion-label>
+              <ion-input type="text" required="true" formControlName="username"></ion-input>
+            </ion-item>
+            <ion-item class="ion-margin">
+              <ion-label position="floating">Password</ion-label>
+              <ion-input type="password" required="true" formControlName="password"></ion-input>
+            </ion-item>
+            <ion-row class="ion-justify-content-center">
+              <ion-button type="submit" shape="rounded" (click)="login(this.loginForm.value.username, this.loginForm.value.password)">
+                Login
+              </ion-button>
+            </ion-row>
+          </form> 
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
